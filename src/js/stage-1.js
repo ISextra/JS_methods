@@ -11,16 +11,11 @@ function func1 (num) {
 //Написать функцию, которая на вход принимает строку и возвращает длину самого
 // длинного слова в этой строке
 function func2 (str) {
-    let length = 0;
     let maxlength = 0;
-    for (let i = 0; i<str.length;i++) {
-        length++;
-        if ((str[i+1] === " ")||(str[i+1] === undefined)){
-            if (length > maxlength) {
-                maxlength = length;
-            }
-            i++;
-            length=0;
+    let str1 = str.split(" ");
+    for (let string of str1) {
+        if (string.length > maxlength) {
+            maxlength = string.length
         }
     }
     return(maxlength);
@@ -31,11 +26,11 @@ function func2 (str) {
 // наибольшего числа каждого предоставленного подмассива.
 function func3 (arr) {
     let arr1 = [];
-    for (let i = 0; i < arr.length; i++) {
-        let maxnum = arr[i][0];
-        for (let j = 0; j < arr[i].length;j++){
-            if (maxnum < arr[i][j]) {
-                maxnum = arr[i][j];
+    for (let i of arr) {
+        let maxnum = i[0];
+        for (let j of i){
+            if (maxnum < j) {
+                maxnum = j;
             }
         }
         arr1.push(maxnum);
@@ -47,14 +42,30 @@ function func3 (arr) {
 // (первый аргумент), если она длиннее заданной максимальной длины строки (второй
 // аргумент) и возвращает обрезанную строку с «…» в конце.
 function func4 (text, length) {
-    for (let i = length; i < text.length-1;i++) {
-        text[i] = "";
+    if (text.length > length) {
+        text = text.slice(0, length);
+        text+="...";
     }
-    text += "...";
     return(text);
 }//map, splice
+
+
+//Написать функцию, которая на вход принимает строку и возвращает эту строку в
+// формате: каждое слово начинается с заглавной буквы, остальные в нижнем регистре
+function func5 (text) {
+    let str1 = text.split(" ");
+    text = "";
+    for (let string of str1) {
+        console.log(string);
+        text += string.slice(0, 1).toUpperCase();
+        text += string.slice(1, string.length).toLowerCase();
+        text += " ";
+    }
+    return(text);
+}
 
 //console.log(func1(4));
 //console.log(func2("hi world"));
 //console.log(func3([[1, 2, 3], [4, 5], [6, 7, 8, 9]]));
-console.log(func4("wasdwasdwasd", 4));
+//console.log(func4("wasdwasdwasd", 4));
+console.log(func5("GOOD MORNING XFX"));
