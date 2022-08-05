@@ -55,10 +55,9 @@ function func4 (text, length) {
 function func5 (text) {
     let str1 = text.split(" ");
     text = "";
-    for (let string of str1) {
-        console.log(string);
-        text += string.slice(0, 1).toUpperCase();
-        text += string.slice(1, string.length).toLowerCase();
+    for (let word of str1) {
+        text += word.slice(0, 1).toUpperCase();
+        text += word.slice(1, word.length).toLowerCase();
         text += " ";
     }
     return(text);
@@ -68,4 +67,4 @@ function func5 (text) {
 //console.log(func2("hi world"));
 //console.log(func3([[1, 2, 3], [4, 5], [6, 7, 8, 9]]));
 //console.log(func4("wasdwasdwasd", 4));
-console.log(func5("GOOD MORNING XFX"));
+//console.log(func5("GOOD MORNING XFX"));
