@@ -1,7 +1,7 @@
 
 //Написать функцию, которая на вход принимает целое число и возвращает факториал
 // этого числа.
-function factorial(num) {
+let factorial = num => {
     for (let i = num-1;i>1;i--) {
         num *= i;
     }
@@ -11,7 +11,7 @@ function factorial(num) {
 
 //Написать функцию, которая на вход принимает строку и возвращает длину самого
 // длинного слова в этой строке
-function getMaxWordLengthOfString(str) {
+let getMaxWordLengthOfString = str => {
     let maxlength = 0;
     const str1 = str.split(" ");
 
@@ -28,7 +28,7 @@ function getMaxWordLengthOfString(str) {
 //Написать функцию, которая на вход принимает массив, состоящий из массивов целых
 // чисел (например: [[1, 2, 3], [4, 5], [6, 7, 8, 9]]) и возвращает массив состоящий из
 // наибольшего числа каждого предоставленного подмассива.
-function getMaxNumbersArray(arr) {
+let getMaxNumbersArray = arr => {
     return arr.map(function callback(value,index,arr) {
         let maxvalue = arr[index][0];
 
@@ -45,7 +45,7 @@ function getMaxNumbersArray(arr) {
 //Написать функцию, которая на вход принимает строку и целое число и обрезает строку
 // (первый аргумент), если она длиннее заданной максимальной длины строки (второй
 // аргумент) и возвращает обрезанную строку с «…» в конце.
-function getPartOfString(text, length) {
+let getPartOfString = (text, length) => {
     if (text.length > length) {
         text = text.slice(0, length);
         text+="...";
@@ -56,7 +56,7 @@ function getPartOfString(text, length) {
 
 //Написать функцию, которая на вход принимает строку и возвращает эту строку в
 // формате: каждое слово начинается с заглавной буквы, остальные в нижнем регистре
-function setWordsCase(text) {
+let setWordsCase = text => {
     let str1 = text.split(" ");
     text = "";
 
@@ -76,7 +76,7 @@ function setWordsCase(text) {
 // индекса n второго массива и вернуть полученный массив. Входные массивы не должны
 // изменяться. (например: при входных данных ([1, 2, 3], [4, 5], 1) должно вернуться
 // [4, 1, 2, 3, 5].
-function getOneArrayOfSeveral(arr1,arr2,num) {
+let getOneArrayOfSeveral = (arr1,arr2,num) => {
     let arr11 = arr1.slice();
     let arr22 = arr2.slice();
 
@@ -91,16 +91,15 @@ function getOneArrayOfSeveral(arr1,arr2,num) {
 //Написать функцию, которая на вход принимает массив и удаляет в нем все "ложные
 // значения"
 
-function deleteFalseValues(arr) {
+let deleteFalseValues = arr => {
     arr = arr.filter(Boolean);
     return arr;
 }
-console.log(deleteFalseValues([ "",0,null,undefined,60,-0,"20"]));
 
 //Написать функцию, которая на вход принимает массив, состоящий из двух строк.
 // Функция должна вернуть true, если строка в первом элементе массива содержит все
 // буквы строки во втором элементе массива (регистр игнорируется).
-function findStrInStr(arr) {
+let findStrInStr = arr => {
     let str1;
     let str2;
 
@@ -119,7 +118,7 @@ function findStrInStr(arr) {
 //Написать функцию, которая на вход принимает масссив и целое число. Функция
 // должна разбить массив (первый аргумент) на группы длиной size (второй агрумент) и
 // вернуть их в виде двумерного массива.
-function splitArray(arr, size) {
+let splitArray = (arr, size) => {
     let arr1 = arr.slice();
     let arr2 = [];
 
@@ -135,7 +134,7 @@ function splitArray(arr, size) {
 
 //Используя рекурсию (без использования циклов). Написать функцию, которая
 // принимает массив и целое число (n) и заполняет массив числами от n до 1.
-function fillArray(arr,n) {
+let fillArray = (arr,n) => {
     if (n == 0) {
         return arr;
     } else {
@@ -144,7 +143,7 @@ function fillArray(arr,n) {
     }
 }
 
-//console.log(factorial(4));
+console.log(factorial(4));
 //console.log(getMaxWordLengthOfString("hi world"));
 //console.log(getMaxNumbersArray([[1, 2, 3], [4, 5], [6, 7, 8, 9]]));
 //console.log(getPartOfString("wasdwasdwasd", 4));
