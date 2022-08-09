@@ -92,12 +92,10 @@ function getOneArrayOfSeveral(arr1,arr2,num) {
 // значения"
 
 function deleteFalseValues(arr) {
-    arr = arr.filter(function callback(value) {
-        return (value !== undefined && value !== null && value !== false && value !== 0 && value !== "");
-    });
-
+    arr = arr.filter(Boolean);
     return arr;
 }
+console.log(deleteFalseValues([ "",0,null,undefined,60,-0,"20"]));
 
 //Написать функцию, которая на вход принимает массив, состоящий из двух строк.
 // Функция должна вернуть true, если строка в первом элементе массива содержит все
@@ -153,6 +151,6 @@ function fillArray(arr,n) {
 //console.log(setWordsCase("GOOD MORNING XFX"));
 //console.log(getOneArrayOfSeveral([1, 2, 3], [4, 5], 1));
 //console.log(deleteFalseValues([ "",0,null,undefined,60,-0,"20"]));
-//console.log(deleteFalseValues(["123456", "123456"]));
+//console.log(findStrInStr(["123456", "123456"]));
 //console.log(splitArray([1,2,3,4,5,6,7,8,9,10,11], 3));
 //console.log(fillArray([], 10));
