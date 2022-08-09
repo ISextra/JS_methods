@@ -142,7 +142,7 @@ function fillArray(arr,n) {
         return arr;
     } else {
         arr[arr.length] = n;
-        return func10(arr,n-1);
+        return fillArray(arr,n-1);
     }
 }
 
