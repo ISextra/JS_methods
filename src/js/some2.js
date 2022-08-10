@@ -24,4 +24,4 @@ Array.prototype.some2 = function (callback, thisArg) {
 
     return false;
 };
-//console.log(arr2.some2((value) => value === "Ana"));
+//console.log(["John", "Alex", "Ana", "Bob"].some2((value) => value === "Ana"));

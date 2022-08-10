@@ -18,4 +18,4 @@ Array.prototype.find2 = function (callback, thisArg) {
         i++;
     }
 };
-//console.log(arr2.find2((value) => value === "Ana"));
+//console.log([5,10,15,20].find2((value) => value === "Ana"));

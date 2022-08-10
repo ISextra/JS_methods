@@ -1,7 +1,7 @@
 //Написать функцию, которая на вход принимает массив, состоящий из двух строк.
 // Функция должна вернуть true, если строка в первом элементе массива содержит все
 // буквы строки во втором элементе массива (регистр игнорируется).
-let findStrInStr = arr => {
+export let findStrInStr = arr => {
     let str1;
     let str2;
 
@@ -16,4 +16,3 @@ let findStrInStr = arr => {
     if (str1.indexOf(str2) > -1) return true;
     else return false;
 };
-//console.log(findStrInStr(["123456", "123456"]));

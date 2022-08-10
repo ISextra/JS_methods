@@ -1,6 +1,6 @@
 //Написать функцию, которая на вход принимает строку и возвращает эту строку в
 // формате: каждое слово начинается с заглавной буквы, остальные в нижнем регистре
-let setWordsCase = text => {
+export let setWordsCase = text => {
     let str1 = text.split(" ");
     text = "";
 
@@ -14,4 +14,3 @@ let setWordsCase = text => {
 
     return(text);
 };
-//console.log(setWordsCase("GOOD MORNING XFX"));

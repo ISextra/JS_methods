@@ -3,7 +3,7 @@
 // индекса n второго массива и вернуть полученный массив. Входные массивы не должны
 // изменяться. (например: при входных данных ([1, 2, 3], [4, 5], 1) должно вернуться
 // [4, 1, 2, 3, 5].
-let getOneArrayOfSeveral = (arr1,arr2,num) => {
+export let getOneArrayOfSeveral = (arr1,arr2,num) => {
     let arr11 = arr1.slice();
     let arr22 = arr2.slice();
 
@@ -14,4 +14,3 @@ let getOneArrayOfSeveral = (arr1,arr2,num) => {
 
     return(arr22);
 };
-//console.log(getOneArrayOfSeveral([1, 2, 3], [4, 5], 1));

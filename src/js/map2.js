@@ -19,4 +19,4 @@ Array.prototype.map2 = function (callback, thisArg) {
 
     return newArray;
 };
-//console.log(arr.map2((value) => value+1, arr1));
+//console.log([10,11,12,13,14,15,16,17,18,19,20].map2((value) => value+1));

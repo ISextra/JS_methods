@@ -21,4 +21,4 @@ Array.prototype.filter2 = function (callback, thisArg) {
 
     return newArray;
 };
-//console.log(arr.filter2((value) => value%2 === 0));
+//console.log([10,11,12,13,14,15,16,17,18,19,20].filter2((value) => value%2 === 0));
