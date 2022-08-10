@@ -143,7 +143,7 @@ let fillArray = (arr,n) => {
     }
 }
 
-console.log(factorial(4));
+//console.log(factorial(4));
 //console.log(getMaxWordLengthOfString("hi world"));
 //console.log(getMaxNumbersArray([[1, 2, 3], [4, 5], [6, 7, 8, 9]]));
 //console.log(getPartOfString("wasdwasdwasd", 4));
