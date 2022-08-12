@@ -1,5 +1,4 @@
 //Написать свою реализацию функции map
-
 Array.prototype.map2 = function (callback, thisArg) {
     let arr = this;
 
