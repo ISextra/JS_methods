@@ -1,6 +1,6 @@
 //Написать функцию, которая на вход принимает строку и возвращает длину самого
 // длинного слова в этой строке
-let getMaxWordLengthOfString = str => {
+export let getMaxWordLengthOfString = str => {
     let maxlength = 0;
     const str1 = str.split(" ");
 
