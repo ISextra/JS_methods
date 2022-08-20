@@ -6,7 +6,7 @@ Array.prototype.map2 = function (callback, thisArg) {
         arr = thisArg;
     }
 
-    let newArray = [];
+    const newArray = [];
     let i = 0;
 
     while (i < arr.length) {
