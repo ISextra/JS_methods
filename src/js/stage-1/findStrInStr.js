@@ -1,18 +1,22 @@
+
 //Написать функцию, которая на вход принимает массив, состоящий из двух строк.
 // Функция должна вернуть true, если строка в первом элементе массива содержит все
 // буквы строки во втором элементе массива (регистр игнорируется).
-export let findStrInStr = arr => {
-    let str1;
-    let str2;
+export const findStrInStr = arr => {
+    let [str1, str2] = arr;
 
-    if (arr[0].toLowerCase()) {
-        str1 = arr[0].toLowerCase();
-        str2 = arr[1].toLowerCase();
-    } else {
-        str1 = arr[0];
-        str2 = arr[1];
+    str1 = str1.toLowerCase();
+    str2 = str2.toLowerCase();
+
+    let i = 0;
+
+    while (i < str2.length) {
+        if (str1.indexOf(str2[i]) !== -1) {
+            i++;
+        } else {
+            return false;
+        }
     }
 
-    if (str1.indexOf(str2) > -1) return true;
-    else return false;
+    return true;
 };
