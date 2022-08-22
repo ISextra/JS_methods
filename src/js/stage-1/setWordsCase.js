@@ -3,8 +3,8 @@
 export const setWordsCase = text => {
     const str1 = text.split(" ");
 
-    const str2 = str1.map( (value, index) => {
-        return value.slice(0, 1).toUpperCase() + value.slice(1, value.length).toLowerCase();
+    const str2 = str1.map( (value) => {
+        return `${value.slice(0, 1).toUpperCase()} + ${value.slice(1, value.length).toLowerCase()}`;
     });
 
     return str2.join(' ');
