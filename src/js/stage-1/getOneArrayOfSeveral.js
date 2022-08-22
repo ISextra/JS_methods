@@ -3,14 +3,11 @@
 // индекса n второго массива и вернуть полученный массив. Входные массивы не должны
 // изменяться. (например: при входных данных ([1, 2, 3], [4, 5], 1) должно вернуться
 // [4, 1, 2, 3, 5].
-export let getOneArrayOfSeveral = (arr1,arr2,num) => {
-    let arr11 = arr1.slice();
-    let arr22 = arr2.slice();
+export const getOneArrayOfSeveral = (arr1,arr2,num) => {
+    let arr11 = [...arr1];
+    let arr22 = [...arr2];
 
-    arr11.map(function callback(value) {
-        arr22.splice(num,0,value);
-        num++;
-    });
+    arr22.splice(num, 0, ...arr11);
 
-    return(arr22);
+    return arr22 ;
 };
