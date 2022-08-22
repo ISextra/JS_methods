@@ -5,7 +5,7 @@ export const getMaxNumbersArray = arr => {
     return arr.map( (value,index,arr) => {
         let maxvalue = arr[index][0];
 
-        value.reduce( (previous,current) => {
+       maxvalue = value.reduce( (previous,current) => {
             if (current > maxvalue) {
                 maxvalue = current;
             }
