@@ -3,12 +3,13 @@
 // наибольшего числа каждого предоставленного подмассива.
 export const getMaxNumbersArray = arr => {
     return arr.map( (value,index,arr) => {
-        let maxvalue = arr[index][0];
+       let maxvalue = arr[index][0];
 
        maxvalue = value.reduce( (previous,current) => {
             if (current > maxvalue) {
                 maxvalue = current;
             }
+
             return maxvalue;
         });
 
