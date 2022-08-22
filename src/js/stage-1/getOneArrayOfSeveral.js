@@ -7,7 +7,7 @@ export const getOneArrayOfSeveral = (arr1,arr2,num) => {
     let arr11 = [...arr1];
     let arr22 = [...arr2];
 
-    arr22.splice(num,0,...arr11);
+    arr22.splice(num, 0, ...arr11);
 
     return arr22 ;
 };
