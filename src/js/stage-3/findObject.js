@@ -3,7 +3,7 @@
 // (второй аргумент). Например: whatIsInAName([{ "apple": 1, "bat": 2 }, { "apple": 1 },
 // { "apple": 1, "bat": 2, "cookie": 2 }, { "bat":2 }], { "apple": 1, "bat": 2 }) должен
 // вернуться [{ "apple": 1, "bat": 2 }, { "apple": 1, "bat": 2, "cookie":2 }]
-export let findObject = (arr, arg) => {
+export const findObject = (arr, arg) => {
     let arr1 = [];
 
     arr.forEach(function callback(value) {
