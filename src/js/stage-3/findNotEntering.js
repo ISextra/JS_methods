@@ -1,14 +1,14 @@
 //Написать функцию, которая на вход принимает два массива и возвращает новый
 // массив с элементами найденными только в одном массиве, но не в обоих.
-export let findNotEntering = (arr1, arr2) => {
+export const findNotEntering = (arr1, arr2) => {
     let arr3 = [];
     let arr4 = [];
 
-    arr1.forEach(function callback(value,index) {
+    arr1.forEach(function callback(value) {
         if (!arr2.includes(value)) arr3.push(value);
     });
 
-    arr2.forEach(function callback(value,index) {
+    arr2.forEach(function callback(value) {
         if (!arr1.includes(value)) arr4.push(value);
     });
 
