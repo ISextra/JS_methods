@@ -7,6 +7,7 @@ export const fillArray = (arr,n) => {
 
     if (n !== 0) {
         arr[arr.length] = n;
+
         return fillArray(arr, n - 1);
     }
 
