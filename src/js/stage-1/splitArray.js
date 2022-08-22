@@ -9,10 +9,12 @@ export const splitArray = (arr, size) => {
     arr2 = arr1.reduce((final, curr, i) => {
         if (i % size !== 0) {
             final[arrayIndex].push(curr);
+
             return final;
         }
         arrayIndex++;
         final.push([curr]);
+
         return final;
     }, arr2);
 
