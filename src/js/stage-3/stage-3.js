@@ -9,7 +9,7 @@ import {findNotEnteringE} from './findNotEnteringE.js';
 import {replaceSpecialCharacters} from './replaceSpecialCharacters.js';
 import {additionPrimes} from './additionPrimes.js';
 import {deleteWhileNotTrue} from './deleteWhileNotTrue.js';
-import {deploymentArray} from './deploymentArray.js';
+import {deployArray} from './deployArray.js';
 import {addExpectedArgument} from './addExpectedArgument.js';
 
 
