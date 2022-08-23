@@ -3,19 +3,23 @@
 // слово, которое нужно заменить, третий аргумент - слово, на которое нужно заменить.
 // При замене сохраняйте регистр первого символа в исходном слове.
 export const deleteStrInStr = (str, searchWord, replaceWord) => {
-    let arr1 = str.split(" ");
+    const isFirstCharacterInUpperCase = (Array) => {
+        const firstCharacter = Array[0];
 
-    arr1.reduce( (result, value,index) => {
-        if (value === searchWord) {
-            if (value[0] === value[0].toUpperCase()) {
-                replaceWord = replaceWord.slice(0, 1).toUpperCase() + replaceWord.slice(1, value.length+1);
+        return firstCharacter === firstCharacter.toUpperCase();
+    }
+
+    const result = str.split(" ");
+
+    return result.reduce((previous, current) => {
+        if (current === searchWord) {
+            if (isFirstCharacterInUpperCase(current)) {
+                replaceWord = replaceWord.slice(0, 1).toUpperCase() + replaceWord.slice(1, current.length+1);
             }
 
-            arr1.splice(index,1,replaceWord);
+            return `${previous} ${replaceWord}`;
         }
 
-        return value;
+        return `${previous} ${current}`;
     });
-
-    return arr1.join(' ');
 };
