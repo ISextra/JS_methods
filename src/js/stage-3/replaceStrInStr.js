@@ -2,7 +2,7 @@
 // аргумент - это строка, в которой осуществляется поиск и замена. Второй аргумент - это
 // слово, которое нужно заменить, третий аргумент - слово, на которое нужно заменить.
 // При замене сохраняйте регистр первого символа в исходном слове.
-export const deleteStrInStr = (str, searchWord, replaceWord) => {
+export const replaceStrInStr = (str, searchWord, replaceWord) => {
     const isFirstCharacterInUpperCase = (Array) => {
         const firstCharacter = Array[0];
 
