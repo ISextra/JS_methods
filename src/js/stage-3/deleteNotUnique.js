@@ -2,16 +2,12 @@
 // массив уникальных значений. Значения должны быть отсортированы по их
 // первоначальному порядку.
 export const deleteNotUnique = (...args) => {
-
-    let result = args.reduce((previousValue, currentValue) => {
+    const merge = args.reduce((previousValue, currentValue) => {
         return [...previousValue, ...currentValue];
     });
 
-    console.log(result);
-    // let arr = result.reduce((previous,current)=>{
-    //     return {...previous, ...current}
-    // })
-    // console.log(arr);
+    const arrayToString = merge.map(item => JSON.stringify(item));
+    const unique = [...new Set(arrayToString)];
 
-    return [...new Set(result)];
+    return unique.map(item => JSON.parse(item));
 }
