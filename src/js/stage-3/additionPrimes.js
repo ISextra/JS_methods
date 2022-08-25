@@ -3,14 +3,17 @@ export const additionPrimes = (n) =>{
     let arrayNumbers = Array.from(Array(n).keys());
     arrayNumbers.splice(0,2);
 
-    console.log(arrayNumbers);
+    return arrayNumbers.reduce((previousValue, currentValue) => {//проход по всем элементам
+        let index = 2;
 
-    return arrayNumbers.reduce((previousValue, currentValue) => {
-        if (arrayNumbers.some((value,index)=>currentValue % value !== 0)) {
-            console.log(currentValue);
-            return previousValue;
+        while (index < currentValue) {
+            if (currentValue % index === 0){
+                return previousValue;
+            }
+
+            index++;
         }
 
         return previousValue + currentValue;
-    });
+    },0);
 };
