@@ -2,9 +2,9 @@
 // аргумент, то возвращает функцию, которая ожидает второй аргумент и возвращает
 // сумму.
 
-export const addExpectedArgument = (arg1, arg2) => {
-    if (Function.length < 2) {
-        arg2 = prompt("Введите второй аргумент");
+export function addExpectedArgument(arg1, arg2) {
+    if (arguments.length < 2 || arguments[1] === null) {
+        return addExpectedArgument(arg1,prompt('Введите второе значение', '1'));
     }
 
     if (Number(arg2)) {

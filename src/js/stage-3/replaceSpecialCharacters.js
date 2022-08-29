@@ -5,13 +5,15 @@ export const replaceSpecialCharacters = (str) => {
         value: ["\&", "\<", "\>", "\"", "\'"],
         html: ["&amp", "&lt", "&gt", "&quot", "&apos"]
     };
-    let arr1 = str.split("");
+    const arr1 = str.split("");
 
-    arr1.forEach((value,index) => {
+    let result = arr1.map((value) => {
         if (specChar.value.indexOf(value) > -1) {
-            arr1.splice(index,1,specChar.html[specChar.value.indexOf(value)]) ;
+            return specChar.html[specChar.value.indexOf(value)];
         }
+
+        return value;
     });
 
-    return arr1.join('');
+    return result.join('');
 };

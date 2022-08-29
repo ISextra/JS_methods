@@ -1,21 +1,13 @@
 //8. Написать функцию, которая принимает два или более массивов и возвращает новый
 // массив уникальных значений. Значения должны быть отсортированы по их
 // первоначальному порядку.
-export const findNotEnteringE = (...args) => {
-    let arr = args.flat(Infinity);
-    let arr1 = [];
-
-    arr.forEach((value,index)=> {
-        let a = value;
-
-        arr.splice(index,1,undefined);
-
-        if (!arr.includes(a)) {
-            arr1.push(a);
-        }
-
-        arr.splice(index,1,a);
+export const deleteNotUnique = (...args) => {
+    const merge = args.reduce((previousValue, currentValue) => {
+        return [...previousValue, ...currentValue];
     });
 
-    return arr1;
+    const arrayToString = merge.map(item => JSON.stringify(item));
+    const unique = [...new Set(arrayToString)];
+
+    return unique.map(item => JSON.parse(item));
 }

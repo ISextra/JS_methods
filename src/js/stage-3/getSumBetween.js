@@ -5,11 +5,11 @@ export const getSumBetween = (arr) => {
     arr.sort();
 
     let sum = 0;
-    let a1 = arr[0];
+    let [firstValue, secondValue] = arr;
 
-    while (a1 <= arr[1]) {
-        sum += a1;
-        a1++;
+    while (firstValue <= secondValue) {
+        sum += firstValue;
+        firstValue++;
     }
 
     return sum;

@@ -1,20 +1,19 @@
 //Написать функцию, которая суммирует все простые числа до n (аргумент функции)
 export const additionPrimes = (n) =>{
-    let arr = [];
+    let arrayNumbers = Array.from(Array(n).keys());
+    arrayNumbers.splice(0,2);
 
-    nextPrime:
-        for (let i = 2; i <= n; i++) { // Для всех i...
+    return arrayNumbers.reduce((previousValue, currentValue) => {//проход по всем элементам
+        let index = 2;
 
-            for (let j = 2; j < i; j++) { // проверить, делится ли число..
-                if (i % j === 0) continue nextPrime; // не подходит, берём следующее
+        while (index < currentValue) {
+            if (currentValue % index === 0){
+                return previousValue;
             }
 
-            arr.push(i); // простое число
+            index++;
         }
 
-
-    console.log(arr);
-    return arr.reduce(function(previousValue, currentValue) {
         return previousValue + currentValue;
-    });
+    },0);
 };

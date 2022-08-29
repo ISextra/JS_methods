@@ -3,10 +3,6 @@
 // оставшуюся часть массива. Например: dropElements([1, 2, 3, 4], function(n) {return n >=
 // 3;}) должна вернуть [3, 4].
 
-export const deleteWhileNotTrue = (arr,func) => {
-    while (!func(arr[0])) {
-        arr.splice(0,1);
-    }
-
-    return arr;
+export const deleteWhileNotTrue = (result, func) => {
+    return result.filter(func);
 };

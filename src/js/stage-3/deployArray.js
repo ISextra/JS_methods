@@ -1,5 +1,5 @@
 //Написать функцию, которая принимает массив различной вложенности и возвращает
 // одномерный массив. Например: steamrollArray([1, [2], [3, [[4]]]]) должна вернуть [1, 2, 3, 4].
-export const deploymentArray = (arr) => {
+export const deployArray = (arr) => {
   return arr.flat(Infinity);
 };

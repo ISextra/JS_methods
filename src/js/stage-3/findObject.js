@@ -4,20 +4,16 @@
 // { "apple": 1, "bat": 2, "cookie": 2 }, { "bat":2 }], { "apple": 1, "bat": 2 }) должен
 // вернуться [{ "apple": 1, "bat": 2 }, { "apple": 1, "bat": 2, "cookie":2 }]
 export const findObject = (arr, arg) => {
-    let arr1 = [];
+    const argKeys = Object.keys(arg);
+    const argValues = Object.values(arg);
 
-    arr.forEach(function callback(value) {
-        let flag = true;
+    return arr.filter(object => {
+        const objectKeys = Object.keys(object);
+        const objectValues = Object.values(object);
 
-        for (let key in arg) {
-            if (!(key in value) || value[key] !== arg[key]) {
-                flag = false
-            }
-        }
+        const keyFlag = argKeys.every(element=> objectKeys.includes(element));
+        const valueFlag = argValues.every(element=> objectValues.includes(element));
 
-        if (flag) {
-            arr1.push(value);
-        }
+        return (keyFlag & valueFlag);
     });
-    return arr1;
 }
