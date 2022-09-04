@@ -11,9 +11,9 @@ export const findObject = (arr, arg) => {
         const objectKeys = Object.keys(object);
         const objectValues = Object.values(object);
 
-        const keyFlag = argKeys.every(element=> objectKeys.includes(element));
-        const valueFlag = argValues.every(element=> objectValues.includes(element));
+        const isAllKeysIncludes = argKeys.every(element=> objectKeys.includes(element));
+        const isAllValuesIncludes = argValues.every(element=> objectValues.includes(element));
 
-        return (keyFlag & valueFlag);
+        return (isAllKeysIncludes & isAllValuesIncludes);
     });
 }

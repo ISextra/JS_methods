@@ -14,7 +14,7 @@ export const replaceStrInStr = (str, searchWord, replaceWord) => {
     return result.reduce((previous, current) => {
         if (current === searchWord) {
             if (isFirstCharacterInUpperCase(current)) {
-                replaceWord = replaceWord.slice(0, 1).toUpperCase() + replaceWord.slice(1, current.length + 1);
+                replaceWord = `${replaceWord.slice(0, 1).toUpperCase()} ${replaceWord.slice(1, current.length + 1)}`;
             }
 
             return `${previous} ${replaceWord}`;

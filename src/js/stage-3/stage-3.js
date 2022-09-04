@@ -21,11 +21,11 @@ import {addExpectedArgument} from './addExpectedArgument.js';
 // console.log(setSpinalCase("This Is Spinal_Tap"));
 // console.log(replaceStrInStr("hello My friend", "My", "our"));
 // console.log(searchForMissingSymbol("abce"));
-console.log(searchForMissingSymbolAlt("abce"));
+// console.log(searchForMissingSymbolAlt("abcdh"));
 // console.log(deleteNotUnique([{a: 1}, {b: 2}], [{a: 1}], [{a: 1}, {a: 1}], [{a: 4}],[{a: 4}]));
 // console.log(replaceSpecialCharacters("<\"<might \& magic\">"));
 // console.log(additionPrimes(10));
 // console.log(deleteWhileNotTrue([1,2,3,4], value => {return value >= 3;}));
 // console.log(deploymentArray([1, [2], [3, [[4]]]]));
-// console.log(addExpectedArgument(2));
+console.log(addExpectedArgument(2)(8));
 
